@@ -1,0 +1,20 @@
+// contact.pug
+
+include ./layout.pug
+
+section.contact
+    h1 Contact Us
+    p Have questions or need assistance? Feel free to reach out to us.
+    form
+      label(for='name') Name
+      input(type='text', id='name', name='name', required)
+
+      label(for='email') Email
+      input(type='email', id='email', name='email', required)
+
+      label(for='message') Message
+      textarea(id='message', name='message', required)
+
+      button(type='submit') Send Message
+
+include ./footer.pug
