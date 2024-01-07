@@ -4,7 +4,7 @@ const checkWorkingHours = (req, res, next) => {
   const day = currentDate.getDay();
   const hour = currentDate.getHours();
 
-  if (day > 5 && hour > 8 && hour < 18) {
+  if (day == 6 || day == 0 || hour < 8 || hour > 18) {
     if (req.originalUrl !== "/forbidden") {
       // Redirect to the forbidden page
       return res.redirect("/forbidden");
